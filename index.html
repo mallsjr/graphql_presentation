@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>GraphQL Presentation</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+						![logo](./public/logo.svg)
+						# Graphql
+						### declarative data fetching
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Agenda
+						1. What is GraphQL?
+						2. What does it promise to help with? 
+						3. Reasons others are using GraphQL
+						4. Demo
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## What is GraphQL?
+						- An API standard developed and then open-sourced by Facebook.
+						- Facebook created it as a solution to issues they were having with the mobile version of news feed.
+						- A declarative data fetching standard that allows a client to specify exactly the data that it needs.
+						- Mostly spoken about in context of React but is not limited to use with React.
+					</textarea>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## What does it promise to help with:
+							- Developers often say a major benefit of GraphQL is that clients can retrieve exactly the data they need. They don’t have to rely on REST endpoints that return fixed data.
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							- Overfetching: Where the client downloads more data than is required. Which can lead to poor performance (more data needs longer to be downloaded and parsed) of the app and also exhausts the users data plans on mobile.
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							- Underfetching the n+1 problem: 
+							The opposite of overfetching the endpoint does not return all the data needed leading to having to make follow up requests.
+						</textarea>
+					</section>
+					<section>
+						<img src="./public/3.png" width="80%">
+					</section>
+					<section>
+						<img src="./public/z9VKnHs.png" width="80%">
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Reasons others are using GraphQL
+							### Rapid product iterations:
+
+							A common pattern with REST APIs is to create endpoints based on views in the app, but a potential drawback is that if change is made to the UI there is an high risk of needing to make changes to the backend.
+
+							Backers of Graphql believe that due to its flexible nature that changes on the client-side can be made without extra work. The client just specifies the extra data it needs.
+						</textarea>
+					</section>
+				<section data-markdown>
+					<textarea data-template>
+					### GraphQL APIs have a strongly typed schema: 
+					One of the biggest problems with most APIs is that they are lacking strong contracts for what operations look like. 
+
+					The schema, being the backbone of every GraphQL API, defines the operations supported by the API.
+
+					Thanks to the strong type-system build tooling can be leveraged to validate API requests and check for any errors that might occur at compile-time. 
+
+					Auto-completion for API operations in the editor.
+					
+					Auto-generated documentation based on the schema.	
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Rich open-source ecosystem and an amazing community
+
+						Today, reference implementations of the GraphQL specification are available in various languages and there are many GraphQL clients. 
+						
+						In addition, lots of tooling (Prisma, GraphQL Playground, and graphql-config) provide seamless workflows and make for an amazing developer experience when building GraphQL APIs.
+					</textarea>
+				</section>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Demo
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## End
+						### Resources
+						[How to GraphQL](https://www.howtographql.com)
+
+						[GraphQL](https://graphql.org)
+					</textarea>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
